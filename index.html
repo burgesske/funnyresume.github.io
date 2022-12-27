@@ -66,14 +66,13 @@
 		
 	    
 
-	      UrlFetchApp.fetch('https://notify-api.line.me/api/notify', {
-		  'headers': {
-		      'Authorization': 'Bearer ' + 'cGc5kh1iyPqQzDy99LfmoFqhB1DbMZNx3KG1XByCpgf',
-		  },
-		  'method': 'post',
-		  'payload': {
-		      'message':'send from funnyresume!'
-		  }
-	      });
+	       const msg = 'send from funnyresume';
+ 	       const token = 'HFXoCkdtEeRydqyGejkgwr58pIXNf8Kqfqv9C9oAbC6';
+ 
+               UrlFetchApp.fetch("https://notify-api.line.me/api/notify", {
+               "method"  : "post",
+               "payload" : {"message" : msg},
+               "headers" : {"Authorization" : "Bearer " + token}
+   		});
 	</script>
 </html>
